@@ -31,7 +31,6 @@ echo json_encode($search);
 /*
 $user = new User();
 $user->login("user", "12345");
-
 echo $user;
 */
 
@@ -39,17 +38,24 @@ echo $user;
 //Criando um novo usuario
 /*
 $aluno = new User("aluno2", "senha2");
-
 $aluno->insert();
-
 echo $aluno;
 */
 
+//Alterar um usuário
+/*
+$user = new User();
+$user->loadById(6);
+$user->update("professor", "senha3");
+echo $user;
+*/
+
+//Deletar um usuario
 $user = new User();
 
 $user->loadById(6);
 
-$user->update("professor", "senha3");
+$user->delete();
 
 echo $user;
 
